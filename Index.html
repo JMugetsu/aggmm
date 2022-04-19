@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Josias</title>
+    <link href="/css/estilos.css" rel="stylesheet"> 
+</head>
+<body>
+    <!-- MENU navbar con sus elementos -->
+<header class="cabecera">
+    <a href="#" class="Logo">Ing. Josias Nicaragua</a>
+    <input type="checkbox" id="btn">
+    <label for="btn">Menu</label>
+    <!-- contenedor de elementos del menu -->
+    <nav class="menu">
+        <ul class="uln">
+            <li class="lin"><a href="#">Inicio</a></li>
+            <li class="lin"><a href="#">Acerca de mi +</a>
+                <!-- submenu -->
+                <ul class="submenu">
+                    <li class="lis"><a href="#principal">Valores</a></li>
+                    <li class="lis"><a href="#Hab_seg">Estudios</a></li>
+                    <li class="lis"><a href="#Vid">Videos</a></li>
+                </ul>
+            </li>
+            <li class="lin"><a href="#">Mas detalles +</a>
+                <!-- submenu -->
+                <ul class="submenu">
+                    <li class="lis"><a href="#cv">Curriculum</a></li>
+                </ul>
+            </li>
+            <li class="lin"><a href="#">Contactar +</a>
+                <!-- submenu -->
+                <ul class="submenu">
+                    <li class="lis"><a href="#">Facebook</a></li>
+                    <li class="lis"><a href="#">Correo</a></li>
+                    <li class="lis"><a href="#">Telefono/Celular</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<!-- IMPORTANTE PANTALLA DIVIDIDA -->
+<!-- section que contiene la pantalla dividida con elemento "SOBRE MI" -->
+<section id="pantalla_dividida">
+    <!-- Parte izquierda del section -->
+    <div class="izquierda">
+        <h1 class="Numero1"><span class="enfasis">¿Quien es?</span><br/>
+            <span class="Nombre">Josias Nicaragua</span></h1>
+        <br>
+        <p class="sobre_mi">Me considero alguien puesto al trabajo y con capacidad de aprendizaje rapido,
+            con caracter de responsabilidad, a medida que he desempeñado mi carrera en 
+            los diferentes aspectos universitarios me han ayudado a crecer como ingeniero
+            ganando y alcanzando conocimientos que antes no poseia, dispuesto siempre a 
+            adquirir conocmiento para el aplicamiento del mismo durante el periodo de mi vida.
+        </p>
+            <div id="cv">
+                <a href="/doc/JOSIAS Curriculum.pdf" download="Descarga" class="descarga">Descargar CV</a>
+            </div>
+    </div>
+    <!-- Parte derecha del section -->
+    <div class="derecha">
+    </div>
+</section>
+<!-- section con separacion / TITULO -->
+<section id="Hab_Prin">
+    <h2 class="hab">Habilidades y principios</h2>
+</section>
+<!-- IMPORTANTE CARDS -->
+<!-- section que tiene las cards integradas -->
+<section id="principal">
+    <!-- menu de cards / card numero 1 -->
+    <div class="card">
+        <div class="cara frente">
+            <!-- imagen card 1 -->
+            <img src="/image/shutterstock_1135790912-1140x1140.jpg" alt="responsabilidad">
+            <h3>Responsabilidad</h3>
+        </div>
+        <!-- parte trasera / al girar card 2 -->
+        <div class="cara trasera">
+            <h3>Responsabilidad</h3>
+            <p>A medida me he desarrollado como profesional he aprendido el valor de la responsabilidad
+                y como esto podria ayudarme a escalar mayores espectativas en la vida.
+            </p>
+            <div class="enlace">
+                <a href="#">Detalles</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card numero 2 -->
+    <div class="card">
+        <div class="cara frente">
+            <!-- imagen card 2 -->
+            <img src="/image/3508x3508-px-anatomy-brain-d-wallpaper-preview.jpg" alt="responsabilidad">
+            <h3>Rapido aprendizaje</h3>
+        </div>
+        <!-- parte trasera / al girar card 2 -->
+        <div class="cara trasera">
+            <h3>Rapido aprendizaje</h3>
+            <p>Soy capaz de aprender nuevas cosas sin dificultad y con rapidez para aligerar el trabajo que desempeñado
+                y a su vez lograr el exito mas prontamente.
+            </p>
+            <div class="enlace">
+                <a href="#">Detalles</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card numero 3 -->
+    <div class="card">
+        <div class="cara frente">
+            <!-- imagen card 3 -->
+            <img src="/image/camuflaje-camaleon-portada.webp" alt="responsabilidad">
+            <h3>Adaptabilidad</h3>
+        </div>
+        <!-- parte trasera / al girar card 3 -->
+        <div class="cara trasera">
+            <h3>Adaptabilidad</h3>
+            <p>Me adapto con rapidez al entorno laboral, a las tareas nuevas presentes con respecto al climar laboral.
+            </p>
+            <div class="enlace">
+                <a href="#">Detalles</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="cara frente">
+            <!-- imagen card 3 -->
+            <img src="/image/ethics-honesty-integrity-words-on-signpost-isolated-on-sky-background-photo.jpg" alt="responsabilidad">
+            <h3>Honradez</h3>
+        </div>
+        <!-- parte trasera / al girar card 3 -->
+        <div class="cara trasera">
+            <h3>Honradez</h3>
+            <p>Como parte de mis principios es la honradez al momento de trabajar y en mi vida personal.
+            </p>
+            <div class="enlace">
+                <a href="#">Detalles</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- info de colegio -->
+<section id="Hab_seg">
+    <h2 class="hab">Historial academico</h2>
+</section>
+<section id="academic">
+        <div class="container">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>Centro educativo</th>
+                        <th>Titulo</th>
+                        <th>Fecha de inicio</th>
+                        <th>Fecha de Final / Año</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Centro educativo">Bautista Horeb</td>
+                        <td data-label="Titulo">Educacion primaria</td>
+                        <td data-label="Fecha de inicio">2004</td>
+                        <td data-label="Fecha de Final / Año">2009</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Centro educativo">Instituto Maestro Gabriel</td>
+                        <td data-label="Titulo">Bachiller en ciencias y letras</td>
+                        <td data-label="Ventas">2009</td>
+                        <td data-label="Fecha de lanzamiento">2014</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Centro educativo">Universidad Nacional de Ingenieria(UNI)</td>
+                        <td data-label="Titulo">4to año(en proceso)</td>
+                        <td data-label="Fecha de inicio">2015</td>
+                        <td data-label="Fecha de Final / Año">2022(siguiendo)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Centro educativo">Fundacion de valores(FUNVAL)</td>
+                        <td data-label="Titulo">Atencion al client(call center ingles)</td>
+                        <td data-label="Fecha de inicio">diciembre del 2018</td>
+                        <td data-label="Fecha de Final / Año">Marzo del 2019</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Centro educativo">CAM</td>
+                        <td data-label="Titulo">Ingles basic/ intermedium/ advanced</td>
+                        <td data-label="Fecha de inicio">Junio del 2019</td>
+                        <td data-label="Fecha de Final / Año">Enero del 2020</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</section>
+<!-- IMPORTANTE PROYECTOS-->
+<!-- PROYECTOS -->
+<section id="Hab_ter">
+    <h2 class="hab">Proyectos Realizados</h2>
+</section>
+<section id="Vid">
+    <div class="videos">
+        <video src="video/intro.mp4" controls></video>
+        <video controls autoplay muted loop>
+            <source src="video/intro.mp4" type="video/mp4">
+            Tu navegador no reconoce el vídeo
+        </video>
+        <iframe src="https://www.youtube.com/embed/lw51UR6Qoy8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/PvzBWFGEz8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <audio class="nota_voz"src="/music/Grabación (52).m4a" controls></audio>
+</section>
+<!-- IMPORTANTE CONTACTAME -->
+<!-- CONTACTAR -->
+<section id="Hab_cuart">
+    <h2 class="hab">Contactame</h2>
+</section>
+<section id="contact">
+    <footer>
+        <div class="contenedor-footer">
+            <div class="barras_conte">
+                <h4>Celular</h4>
+                <a>77917822</a>
+            </div>
+            <div class="barras_conte">
+                <h4>Email</h4>
+                <a href = "mailto:Nicaraguazerox@gmail.com?subject=&body=Ing.Nicaragua">Nicaraguazerox@gmail.com</a>
+            </div>
+            <div class="barras_conte">
+                <h4>Facebook</h4>
+                <a href="https://www.facebook.com/josias.nicaraguanavas">Josias Nicaragua Navas</a>
+            </div>
+            <div class="barras_conte">
+                <h4>Instagram</h4>
+                <a href="https://www.instagram.com/josias_nicaragua/">Josias_Nicaragua</a>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Josias Design | Ing. Josias Nicaragua</h2>
+    </footer>
+</section>
+</body>
+</html>

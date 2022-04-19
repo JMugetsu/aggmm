@@ -1,0 +1,608 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: #fff;
+    background-size: cover;
+    background-position: center;
+}
+/* IMPORTANTE BARRA DE MENU */
+/* navbar principal del menu */
+/* cabecera(header) donde esta el menu implementado */
+header{
+    /* fixed al igual que sticky mantienen al objeto seleccionado fijo
+    esto quiere decir q es arrastrado en toda la pagina al navegar */
+    position: fixed;
+    top:0; left:0; right: 0;
+    background: rgb(4, 59, 110);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    /* sirve para distribuir o estirar el elemento esto a medida crezca */
+    display: flex;
+    /* espacio que se tiene del bloque */
+    padding: 0px 7%;
+    /* alineamiento de objetos */
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    text-transform: capitalize;
+}
+header .Logo{
+    /* funciona para saber el tamaño de negrita que usara */
+    font-weight: bolder;
+    font-size: 25px;
+    color: #fff;
+    /* mantiene los elementos que contenga con espacio entre ellos */
+    justify-content: space-between;
+    text-decoration: none;
+}
+/* menu */
+header .menu .uln{
+    /* el tipo de estilo que poseera el elemento */
+    list-style: none;
+}
+header .menu .uln .lin{
+    position: relative;
+    float: left;
+}
+header .menu .uln .lin a{
+    font-size: 20px;
+    padding: 20px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+header .menu .uln .lin a:hover{
+    background:#003153;
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff, 0 0 5px #33ffff;
+}
+/* submenu valores */
+header .menu .uln .lin .submenu{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: rgba(4, 59, 110);
+    display: none;
+}
+header .menu .uln .lin .submenu .lis{
+    width: 100%;
+}
+/* cubierta de los submenus */
+header .menu .uln .lin .submenu .lis a:hover{
+    color: cyan;
+    box-shadow: 0 0 5px #33ffff, 0 0 5px #33ffff;
+}
+/* el "ul" que esta despues del hover es descendiente de ".menu ul li"
+por ello seleccionará todos los elementos "ul" que sean descendientes directos de ".menu ul li" */
+header .menu .uln .lin:hover > .submenu{
+    display: initial;
+}
+/* menu vertical sub menus */
+.submenu{
+    margin: 0.5px 0px 0px 0px;
+    list-style: none;
+}
+/* boton de menu no desplegado al estar en tamaño de pantalla PC */
+#btn{
+    display: none;
+}
+/* parte del input */
+header label{
+    font-size:20px;
+    color:#333;
+    cursor:pointer;
+    display: none;
+}
+/* IMPORTANTE PARA HACER CAMBIOS EN LA BARRA DE MENU RESPONSIVE */
+/* ajusta el menu vertical mediante la query(@media) */
+@media(max-width:1150px){
+    header{
+        padding: 17px;
+    }
+    header label{
+        /* se mostrara el boton menu al estar en el rango 1150*/
+        display: initial;
+        background: #fff;
+        border-radius: 3px;
+    }
+    /* al posarnos en el menu le da color */
+    header label:hover{
+        color:#fff;
+        background: #3d3d3d;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #33ffff, 0 0 5px #33ffff;
+    }
+    /* editamos el menu que estara presente cuando este en el rango 1150 */
+    header .menu{
+        position: absolute;
+        top:100%; left:0; right: 0;
+        background: #3d3d3d;
+        border-top:1px solid rgba(0, 0, 0, .1) ;
+        display: none;
+    }
+    header .menu .uln .lin{
+        width: 100%;
+    }
+    header .menu .uln .lin .submenu{
+        position: relative;
+        width: 100%;
+    }
+    /* al momento de seleccionar menu se desplegara las opciones */
+    #btn:checked ~ .menu{
+        display: initial;
+    }
+}
+/* IMPORTANTE SEGUNDO BLOQUE SECTION */
+/* Sobre Mi  */
+#pantalla_dividida{
+    display: flex;
+    margin: 70px 0px 0px 0px;
+    flex-direction: row;
+}
+/* parte izquierda que posee el section 2 */
+.izquierda{
+    width: 80%;
+    height: 50vh;
+    background: #2e2e2e;
+    font-size: 20px;
+}
+/* parte derecha que posee el section 2 */
+.derecha{
+    width: 30%;
+    height: 50vh;
+    background:url(/image/WhatsApp\ Image\ 2022-04-13\ at\ 10.37.00\ AM.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* encabezado*/
+h1{
+    padding: 25px 0px 0px 25%;
+    font-size: 50px;
+    margin: auto;
+    float: inline-start;
+
+}
+/* para el enfasis o las letra en blanco en el section */
+.enfasis{
+    color: white;
+    padding: 10%;
+}
+.sobre_mi{
+   align-items: center;
+   float:left;
+   color: aliceblue;
+   width: 90%;
+   padding: 0px 0px 0px 8%;
+   text-align: justify;
+   
+}
+/* Josias Nicaragua valor */
+.Nombre{
+    color: black black;
+}
+/* al pasar el mouse se ilumina con el color dado */
+.Nombre:hover{
+    color: cyan;
+    box-shadow: none;
+}
+/* BOTON */
+#cv{
+
+    text-align: center;
+}
+.descarga{
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.descarga:hover{
+    color: #33ffff;
+    border: 1px solid cyan;
+}
+/* usado para hacer responsive con respecto a una tablet
+solo el section 2 llamado "pantall dividida" */
+@media (max-width:1250px){
+    h1{
+        font-size: 30px;
+        margin: 0;
+    }
+    .enfasis{
+        font-size: 30px;
+        padding: 25px 0px 0px 12vh;
+        text-align: center;
+    }
+    .Nombre{
+        font-size: 30px;
+        padding: 25px 0px 0px 8vh;
+    }
+    .sobre_mi{
+        margin: 0;
+        font-size: 20px;
+        padding: 0px 0px 0px 10%;
+        text-align: justify;
+    }
+    .datos{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+}
+@media (max-width:900px){
+    h1{
+        font-size: 30px;
+        margin: 0;
+    }
+    .enfasis{
+        padding: 25px 5vh 0px 8vh;
+    }
+    .Nombre{
+        padding: 25px 0px 8px 2vh;
+    }
+    .sobre_mi{
+        font-size: 18px;
+        padding: 0px 0px 0px 10%;
+        text-align: justify;
+    }
+    .datos{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+}
+/* para movil */
+@media (max-width:700px){
+    .checkbtn{
+        display: flex;
+    }
+    h1{
+        font-size: 24px;
+        margin: 0;
+    }
+    .enfasis{
+        padding: 25px 0px 0px 12%;
+    }
+    .Nombre{
+        padding: 25px 0px 8px;
+    }
+    .sobre_mi{
+        font-size: 16px;
+    }
+    #pantalla_dividida{
+        flex-direction: column-reverse;
+    }
+    .derecha{
+        width: 100%;
+        height: 68vh;
+    }
+    .izquierda{
+        width: 100%;
+    }
+    .datos{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+    }
+}
+/* IMPORTANTE CARDS */
+/* para editar las cards giratorias */
+#principal{
+    margin: 8px 0px 0px 0px;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh;
+    /* el wrap funciona para que el objeto se adapte a la pantalla */
+    flex-wrap: wrap;
+    /* color degradante de derecha a izquierda */
+    background:url(/image/shutterstock_739595833-min.jpg) no-repeat;
+    background-size:100% 100%;
+}
+/* div contenedor de toda la card */
+.card{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 10px;
+}
+/* class cara editando los elementos que posean esta clase */
+.card .cara{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .8s;   
+}
+/* parte frontal de la card */
+.card .frente{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+/* imagen frontal de la card */
+.card .frente img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* sirve para contener la imagen y ajustarla al contenedor del elemento */
+    object-fit: cover;
+}
+/* texto frontal que posee la card */
+.card .frente h3{
+    position: absolute;
+    /* la propiedad bottom permite desplazar un elemento respecto a su posición original */
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+}
+/* parte trasera al girar */
+.card .trasera{
+    transform: perspective(600px) rotateY(180deg);
+    background: rgba(3,35,54);
+    padding: 5px;
+    color: #fff;
+    display: flex;
+    /* lo direcciona en forma de columna el elemento que se defina */
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+/* div que tiene dentro algunos elementos */
+.card .trasera .enlace{
+    border-top: solid 3px #fff;
+    height: 60px;
+    line-height: 50px;
+}
+/* enlace o redireccion*/
+.card .trasera .enlace a{
+    color: #fff;
+}
+/* texto de la card */
+.card  .trasera h3{
+    font-size:20px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.card .trasera p{
+    /* permite decir el espaciado que posee el texto */
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+.card:hover .frente{
+    /* transforma la perspectiva y gira en el eje y al posarse sobre la card */
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .trasera{
+    transform: perspective(600px) rotateY(360deg);
+}
+/* Habilidades y principios */
+#Hab_Prin{
+    text-align: center;
+    margin: 8px 0px 8px 0px;
+    background: #045079;
+    flex-wrap: wrap;
+}
+.hab{
+    color: #fff;
+}
+.hab:hover{
+    color: #fff;
+}
+/* IMPORTANTE HISTORIAL ACADEMICO */
+/* IMPORTANTE CENTRO DE ESTUDIOS */
+#Hab_seg{
+    text-align: center;
+    margin: 8px 0px 8px 0px;
+    background: #045079;
+    flex-wrap: wrap;
+}
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background: #ccc;
+}
+
+#table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: fixed;
+}
+#table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+#table th, #table td {
+    font-size: 16px;
+    padding: 8px;
+    text-align: center;
+}
+
+#table thead th{ 
+    background-color: #ddd;
+}
+
+#table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#table tbody td:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+    #table {
+        border: 0px;
+    }
+    #table thead {
+        display: none;
+    }
+    #table tr {
+        margin-bottom: 8px;
+        border-bottom: 4px solid #ddd;
+        display: block;
+    }
+    #table th, #table td {
+        font-size: 12px;
+    }
+    #table td {
+        display: block;
+        border-bottom: 1px solid #ddd;
+        text-align: right;
+    }
+    #table  td:last-child {
+        border-bottom: 0px;
+    }
+    #table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        float: left;
+    }
+}
+#academic{
+        background:linear-gradient(to right, rgba(0,49,83,0.3), 
+        rgba(74,205,205,0.6));
+        padding: 20px 0px 20px 0px;
+}
+/* IMPORTANTE VIDEOS PLUS AUDIOS */
+#Hab_ter{
+    text-align: center;
+    margin: 8px 0px 8px 0px;
+    background: #045079;
+    flex-wrap: wrap;
+}
+.videos{
+    width: 80%;
+    margin:auto;
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+.videos video, iframe{
+    width:100%;
+    margin: auto;
+    border: 3px solid white;
+    transition: all 0.5s ease;
+}
+.videos video:hover,iframe:hover{
+    transform: scale(0.8);   
+    border-radius: 5%;
+}
+.nota_voz{
+    padding-top: 50px;
+    display: block;
+    margin: auto;
+    height: 75px;
+    width: 50%;
+}
+#Vid{
+    background:#2e2e2e;
+    padding: 20px 0px 20px 0px;
+}
+#Hab_cuart{
+    text-align: center;
+    margin: 8px 0px 8px 0px;
+    background: #045079;
+    flex-wrap: wrap;
+}
+/* IMPORTANTE CONTACTAR */
+/* CONTACTAR */
+footer{
+    background: rgb(4, 59, 110);
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.barras_conte{
+    text-align: center;
+}
+
+.barras_conte h4{
+    color: #fff;
+    border-bottom: 3px solid cyan;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.barras_conte a{
+    color: #ccc;
+    font-weight: bolder;
+}
+.barras_conte a:hover{
+    background:#2e2e2e;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0px 5px #33ffff, 0 0px 5px #33ffff;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+    font-weight: bolder;
+}
+@media screen and (max-width:500px){
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .barras_conte{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .barras_conte h4{
+        border: none;
+        font-weight: bolder;
+    }
+
+    .barras_conte a{
+        color: #ccc;
+        border-bottom: 1px solid cyan;
+        padding-bottom: 10px;
+        font-weight: bolder;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
